@@ -1,0 +1,56 @@
+{
+    "TotalBody": [
+      "Box & kick",
+      "Burpees",
+      "Drop & Touch",
+      "High knees",
+      "Jumping Jacks",
+      "Mountain Climbers",
+      "Plyo Split Squat",
+      "Side-to-side hop",
+      "Skater",
+      "Squat thrusts"
+    ],
+    "LowerBody": [
+      "Chair split squat",
+      "Long jumps",
+      "Lunge & Rotation",
+      "One-leg deadlift",
+      "One-leg power squat",
+      "One-leg squat",
+      "One-leg squat hops",
+      "One-Leg squat Touch",
+      "One-leg wall sit",
+      "Power squat",
+      "Reverse Lunge & knee lift",
+      "Side lunge"
+    ],
+    "UpperBody": [
+      "Bird dog push-up",
+      "Chair-decline push-up",
+      "Chair Pike push-up",
+      "Diamond push-up",
+      "Downward Dog grasshopper",
+      "Grasshopper push-up",
+      "Hindu push-up",
+      "One-leg push-up",
+      "One-leg triceps dip",
+      "Power Push-up",
+      "Push-up and Rotation",
+      "Spiderman push-up"
+    ],
+    "Core": [
+      "Advanced bird dog",
+      "Bicycle crunch",
+      "Full side plank",
+      "One-leg bridge",
+      "Plank",
+      "Reverse Crunch & Hug",
+      "Reverse Plank",
+      "Scissor Kicks",
+      "Side plank crunch",
+      "V Sit Twist",
+      "Windscreen Wipers"
+    ]
+}
+  
