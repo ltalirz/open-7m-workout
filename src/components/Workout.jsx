@@ -16,19 +16,47 @@ const Workout = () => {
   const [message, setMessage] = useState('');
   const [timerDuration, setTimerDuration] = useState(restDuration); // Start with a 5s rest
 
+  const [wakeLock, setWakeLock] = useState(null);
+
   const startWorkout = () => {
     const plan = generateWorkoutPlan();
     setWorkoutPlan(plan);
     setMessage('Get ready!');
     setWorkoutStarted(true);
     setIsRest(true);
+
+    requestWakeLock();
   };
+
+    // Ensure the wake lock is released when the Workout component unmounts
+    useEffect(() => {
+      return () => {
+        wakeLock?.release().then(() => {
+          console.log('Wake Lock was released');
+        });
+      };
+    }, [wakeLock]);
 
   useEffect(() => {
     if (workoutStarted) {
       speak(message);
     }
   }, [message, workoutStarted]); // This effect runs whenever 'message' changes
+
+
+  const requestWakeLock = async () => {
+    if ('wakeLock' in navigator) {
+      try {
+        const lock = await navigator.wakeLock.request('screen');
+        setWakeLock(lock);
+        console.log('Wake Lock is active');
+      } catch (err) {
+        console.error(`Wake Lock Error: ${err.name}, ${err.message}`);
+      }
+    } else {
+      console.error('Wake Lock API not supported in this browser.');
+    }
+  };
 
   const generateWorkoutPlan = () => {
     const totalBody = [...exercises.TotalBody];
