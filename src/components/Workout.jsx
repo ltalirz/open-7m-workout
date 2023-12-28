@@ -6,7 +6,7 @@ const Workout = () => {
   const nSets = 3;
   const nCategories = Object.keys(exercises).length;
   const nExercisesPerCategory = 3;
-  const exerciseDuration = 6;
+  const exerciseDuration = 30;
   const restDuration = 5;
 
   const [isRest, setIsRest] = useState(true); // Start with rest
