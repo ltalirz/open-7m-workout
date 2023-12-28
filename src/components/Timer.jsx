@@ -22,7 +22,7 @@ const Timer = ({ duration, onComplete }) => {
     return () => clearTimeout(timerId);
   }, [timeLeft, onComplete]);
 
-  return <div><h3>{timeLeft}</h3></div>;
+  return <div><h1>{timeLeft}</h1></div>;
 };
 
 export default Timer;
