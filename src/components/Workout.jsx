@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Timer from './Timer';
 import exercises from '../data/exercises.json'; // Import the JSON data
 
