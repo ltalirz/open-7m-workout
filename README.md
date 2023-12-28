@@ -1,6 +1,6 @@
 # Open 7 Minute Workout
 
-Open-source 7 minute workout app built with React and Vite hosted at [ltalirz.github.io/open-7-minute-workout](https://ltalirz.github.io/open-7-minute-workout/).
+Open-source 7 minute workout app built with React and Vite hosted at [ltalirz.github.io/open-7m-workout](https://ltalirz.github.io/open-7m-workout/).
 
 The app requires the user to do 12 exercises for 30 seconds each with 5 seconds of rest in between. 
 
