@@ -12,6 +12,7 @@ You need a browser with support for
 ## Todo
 - [ ] add pause button
 - [ ] add sound effect leading up to end of exercise
+- [ ] add indicator for number of set  / exercise in set
 - [ ] make number of sets configurable
 - [ ] make exercise difficulty configurable
 

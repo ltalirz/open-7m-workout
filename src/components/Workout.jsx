@@ -72,17 +72,20 @@ const Workout = () => {
     ];
     
     let set = [];
-    for (let i = 0; i < nCategories; i++) {
-      for (let j = 0; j < nExercisesPerCategory; j++) {
+    for (let i = 0; i < nExercisesPerCategory; i++) {
+      for (let j = 0; j < nCategories; j++) {
         set.push(picks[j][i]);
       }
     }
     
     let plan = new Array(nSets*set.length).fill(set).flat();
+
+    console.log(plan);
     return plan;
   };
 
   const pickRandom = (array, count) => {
+    // Randomly pick 'count' elements from 'array', no repeats
     let result = [];
     while (result.length < count) {
       let index = Math.floor(Math.random() * array.length);
