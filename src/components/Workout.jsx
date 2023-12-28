@@ -1,26 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import Timer from './Timer';
-import exercises from '../data/exercises.json';
+import exercises from '../data/exercises.json'; // Import the JSON data
 
 const Workout = () => {
-
-  const [currentExercise, setCurrentExercise] = useState(null);
+  const [currentExercise, setCurrentExercise] = useState('');
+  const [nextExercise, setNextExercise] = useState('');
   const [isRest, setIsRest] = useState(false);
   const [workoutPlan, setWorkoutPlan] = useState([]);
   const [workoutIndex, setWorkoutIndex] = useState(0);
-    
+
   useEffect(() => {
     // Generate workout plan on component mount
     const plan = generateWorkoutPlan();
     setWorkoutPlan(plan);
+    setCurrentExercise(plan[0]);
+    setNextExercise(plan[1] || '');
   }, []);
-
-  useEffect(() => {
-    // Update current exercise
-    if (workoutPlan.length > 0 && workoutIndex < workoutPlan.length) {
-      setCurrentExercise(workoutPlan[workoutIndex]);
-    }
-  }, [workoutIndex, workoutPlan]);
 
   const generateWorkoutPlan = () => {
     let plan = [];
@@ -49,15 +44,28 @@ const Workout = () => {
 
   const handleTimerComplete = () => {
     if (isRest) {
+      // Move to next exercise
       setWorkoutIndex(workoutIndex + 1);
+      setCurrentExercise(workoutPlan[workoutIndex + 1]);
+      setNextExercise(workoutPlan[workoutIndex + 2] || '');
     }
     setIsRest(!isRest);
   };
 
   return (
     <div>
-      <h2>{isRest ? 'Rest' : currentExercise}</h2>
-      <Timer duration={isRest ? 5 : 30} onComplete={handleTimerComplete} />
+      {isRest ? (
+        <div>
+          <h2>Rest</h2>
+          <p>Next up: {nextExercise}</p>
+          <Timer duration={5} onComplete={handleTimerComplete} />
+        </div>
+      ) : (
+        <div>
+          <h2>{currentExercise}</h2>
+          <Timer duration={30} onComplete={handleTimerComplete} />
+        </div>
+      )}
     </div>
   );
 };
