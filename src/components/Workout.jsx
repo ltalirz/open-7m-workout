@@ -3,8 +3,14 @@ import Timer from './Timer';
 import generateWorkoutPlan from './Plan';
 
 const Workout = () => {
-  const exerciseDuration = 30;
-  const restDuration = 5;
+  const defaultRest = 5;
+  const defaultDuration = 30;
+  const defaultSets = 3;
+
+  // State variables
+  const [restDuration, setRestDuration] = useState(defaultRest);
+  const [exerciseDuration, setExerciseDuration] = useState(defaultDuration);
+  const [sets, setSets] = useState(defaultSets);
 
   const [isRest, setIsRest] = useState(true); // Start with rest
   const [workoutPlan, setWorkoutPlan] = useState([]);
@@ -16,7 +22,8 @@ const Workout = () => {
   const [wakeLock, setWakeLock] = useState(null);
 
   const startWorkout = () => {
-    const plan = generateWorkoutPlan();
+    console.log('Starting workout')
+    const plan = generateWorkoutPlan(sets);
     setWorkoutPlan(plan);
     setMessage('Get ready!');
     setWorkoutStarted(true);
@@ -55,6 +62,16 @@ const Workout = () => {
     }
   };
 
+  useEffect(() => {
+    const queryParams = new URLSearchParams(window.location.search);
+    const restParam = queryParams.get('rest');
+    const durationParam = queryParams.get('duration');
+    const setsParam = queryParams.get('sets');
+
+    if (restParam) setRestDuration(parseInt(restParam, 10));
+    if (durationParam) setExerciseDuration(parseInt(durationParam, 10));
+    if (setsParam) setSets(parseInt(setsParam, 10));
+  }, []);
 
   const handleTimerComplete = () => {
     const nextIndex = workoutIndex + 1;

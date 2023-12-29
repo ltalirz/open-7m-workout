@@ -1,10 +1,9 @@
 import exercises from '../data/exercises.json'; // Import the JSON data
 
-const nSets = 3;
 const nCategories = Object.keys(exercises).length;
 const nExercisesPerCategory = 3;
 
-const generateWorkoutPlan = () => {
+const generateWorkoutPlan = (nSets) => {
     const totalBody = [...exercises.TotalBody];
     const lowerBody = [...exercises.LowerBody];
     const upperBody = [...exercises.UpperBody];
