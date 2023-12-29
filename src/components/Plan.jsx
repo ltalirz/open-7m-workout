@@ -24,8 +24,10 @@ const generateWorkoutPlan = () => {
       }
     }
     
-    let plan = new Array(nSets*set.length).fill(set).flat();
-
+    let plan = [];
+    for (let i = 0; i < nSets; i++) {
+        plan = plan.concat(set);
+    }
     console.log(plan);
     return plan;
 };
