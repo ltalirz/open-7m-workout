@@ -1,6 +1,6 @@
-import reactLogo from './assets/react.svg'
-import './App.css'
-import Workout from './components/Workout'
+import reactLogo from "./assets/react.svg";
+import "./App.css";
+import Workout from "./components/Workout";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Workout />
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

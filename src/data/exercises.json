@@ -1,56 +1,55 @@
 {
-    "TotalBody": [
-      "Box & Kick",
-      "Burpees",
-      "Drop & Touch",
-      "High Knees",
-      "Jumping Jacks",
-      "Mountain Climbers",
-      "Plyo Split Squat",
-      "Side-To-Side Hop",
-      "Skater",
-      "Squat Thrusts"
-    ],
-    "LowerBody": [
-      "Chair Split Squat",
-      "Long Jumps",
-      "Lunge & Rotation",
-      "One-Leg Deadlift",
-      "One-Leg Power Squat",
-      "One-Leg Squat",
-      "One-Leg Squat Hops",
-      "One-Leg Squat Touch",
-      "One-Leg Wall Sit",
-      "Power Squat",
-      "Reverse Lunge & Knee Lift",
-      "Side Lunge"
-    ],
-    "UpperBody": [
-      "Bird Dog Push-Up",
-      "Chair-decline push-up",
-      "Chair Pike push-up",
-      "Diamond push-up",
-      "Downward Dog grasshopper",
-      "Grasshopper Push-Up",
-      "Hindu Push-Up",
-      "One-Leg Push-Up",
-      "One-Leg Triceps Dip",
-      "Power Push-Up",
-      "Push-Up and Rotation",
-      "Spiderman Push-Up"
-    ],
-    "Core": [
-      "Advanced Bird Dog",
-      "Bicycle Crunch",
-      "Full Side Plank",
-      "One-Leg Bridge",
-      "Plank",
-      "Reverse Crunch & Hug",
-      "Reverse Plank",
-      "Scissor Kicks",
-      "Side Plank Crunch",
-      "V Sit Twist",
-      "Windscreen Wipers"
-    ]
+  "TotalBody": [
+    "Box & Kick",
+    "Burpees",
+    "Drop & Touch",
+    "High Knees",
+    "Jumping Jacks",
+    "Mountain Climbers",
+    "Plyo Split Squat",
+    "Side-To-Side Hop",
+    "Skater",
+    "Squat Thrusts"
+  ],
+  "LowerBody": [
+    "Chair Split Squat",
+    "Long Jumps",
+    "Lunge & Rotation",
+    "One-Leg Deadlift",
+    "One-Leg Power Squat",
+    "One-Leg Squat",
+    "One-Leg Squat Hops",
+    "One-Leg Squat Touch",
+    "One-Leg Wall Sit",
+    "Power Squat",
+    "Reverse Lunge & Knee Lift",
+    "Side Lunge"
+  ],
+  "UpperBody": [
+    "Bird Dog Push-Up",
+    "Chair-decline push-up",
+    "Chair Pike push-up",
+    "Diamond push-up",
+    "Downward Dog grasshopper",
+    "Grasshopper Push-Up",
+    "Hindu Push-Up",
+    "One-Leg Push-Up",
+    "One-Leg Triceps Dip",
+    "Power Push-Up",
+    "Push-Up and Rotation",
+    "Spiderman Push-Up"
+  ],
+  "Core": [
+    "Advanced Bird Dog",
+    "Bicycle Crunch",
+    "Full Side Plank",
+    "One-Leg Bridge",
+    "Plank",
+    "Reverse Crunch & Hug",
+    "Reverse Plank",
+    "Scissor Kicks",
+    "Side Plank Crunch",
+    "V Sit Twist",
+    "Windscreen Wipers"
+  ]
 }
-  

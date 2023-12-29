@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types"; // Import PropTypes
 
 const Timer = ({ duration, onComplete }) => {
   const [timeLeft, setTimeLeft] = useState(duration); // Initialize to the duration prop
@@ -22,7 +23,17 @@ const Timer = ({ duration, onComplete }) => {
     return () => clearTimeout(timerId);
   }, [timeLeft, onComplete]);
 
-  return <div><h1>{timeLeft}</h1></div>;
+  return (
+    <div>
+      <h1>{timeLeft}</h1>
+    </div>
+  );
+};
+
+// Define PropTypes for Timer
+Timer.propTypes = {
+  duration: PropTypes.number.isRequired,
+  onComplete: PropTypes.func.isRequired,
 };
 
 export default Timer;

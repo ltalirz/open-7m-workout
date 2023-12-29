@@ -1,0 +1,18 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4.0.1
+        with:
+          node-version: 14.x
+      - name: Install dependencies
+        run: npm install --include=dev
+      - name: Run ESLint
+        run: npx eslint 'src/**/*js'

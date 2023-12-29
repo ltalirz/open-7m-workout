@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import Timer from './Timer';
-import generateWorkoutPlan from './Plan';
+import { useState, useEffect } from "react";
+import Timer from "./Timer";
+import generateWorkoutPlan from "./Plan";
 
 const Workout = () => {
   const defaultRest = 5;
@@ -16,30 +16,30 @@ const Workout = () => {
   const [workoutPlan, setWorkoutPlan] = useState([]);
   const [workoutIndex, setWorkoutIndex] = useState(0);
   const [workoutStarted, setWorkoutStarted] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [timerDuration, setTimerDuration] = useState(restDuration); // Start with a 5s rest
 
   const [wakeLock, setWakeLock] = useState(null);
 
   const startWorkout = () => {
-    console.log('Starting workout')
+    console.log("Starting workout");
     const plan = generateWorkoutPlan(sets);
     setWorkoutPlan(plan);
-    setMessage('Get ready!');
+    setMessage("Get ready!");
     setWorkoutStarted(true);
     setIsRest(true);
 
     requestWakeLock();
   };
 
-    // Ensure the wake lock is released when the Workout component unmounts
-    useEffect(() => {
-      return () => {
-        wakeLock?.release().then(() => {
-          console.log('Wake Lock was released');
-        });
-      };
-    }, [wakeLock]);
+  // Ensure the wake lock is released when the Workout component unmounts
+  useEffect(() => {
+    return () => {
+      wakeLock?.release().then(() => {
+        console.log("Wake Lock was released");
+      });
+    };
+  }, [wakeLock]);
 
   useEffect(() => {
     if (workoutStarted) {
@@ -47,26 +47,25 @@ const Workout = () => {
     }
   }, [message, workoutStarted]); // This effect runs whenever 'message' changes
 
-
   const requestWakeLock = async () => {
-    if ('wakeLock' in navigator) {
+    if ("wakeLock" in navigator) {
       try {
-        const lock = await navigator.wakeLock.request('screen');
+        const lock = await navigator.wakeLock.request("screen");
         setWakeLock(lock);
-        console.log('Wake Lock is active');
+        console.log("Wake Lock is active");
       } catch (err) {
         console.error(`Wake Lock Error: ${err.name}, ${err.message}`);
       }
     } else {
-      console.error('Wake Lock API not supported in this browser.');
+      console.error("Wake Lock API not supported in this browser.");
     }
   };
 
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
-    const restParam = queryParams.get('rest');
-    const durationParam = queryParams.get('duration');
-    const setsParam = queryParams.get('sets');
+    const restParam = queryParams.get("rest");
+    const durationParam = queryParams.get("duration");
+    const setsParam = queryParams.get("sets");
 
     if (restParam) setRestDuration(parseInt(restParam, 10));
     if (durationParam) setExerciseDuration(parseInt(durationParam, 10));
@@ -87,17 +86,16 @@ const Workout = () => {
       // Starting rest
       if (nextIndex < workoutPlan.length) {
         // Update message to "Next up" only if there's another exercise
-        setMessage('Next up: ' + workoutPlan[nextIndex]);
+        setMessage("Next up: " + workoutPlan[nextIndex]);
         setTimerDuration(restDuration);
       } else {
         // Handle end of workout
-        setMessage('Workout complete!');
+        setMessage("Workout complete!");
         setTimerDuration(0);
       }
     }
     setIsRest(!isRest);
   };
-
 
   const speak = (text) => {
     const speech = new SpeechSynthesisUtterance(text);
