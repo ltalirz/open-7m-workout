@@ -1,7 +1,3 @@
-// The browser will limit the number of concurrent audio contexts
-// So be sure to re-use them whenever you can
-const myAudioContext = new AudioContext();
-
 /**
  * Helper function to emit a beep sound in the browser using the Web Audio API.
  *
@@ -12,7 +8,7 @@ const myAudioContext = new AudioContext();
  * @returns {Promise} - A promise that resolves when the beep sound is finished.
  */
 
-function beep(duration, frequency, volume) {
+function beep(myAudioContext, duration, frequency, volume) {
   return new Promise((resolve, reject) => {
     // Set default duration if not provided
     duration = duration || 150;

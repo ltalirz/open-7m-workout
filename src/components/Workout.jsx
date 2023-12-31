@@ -62,6 +62,7 @@ const Workout = () => {
     }
   };
 
+  // Read query parameters from URL
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
     const restParam = queryParams.get("rest");
