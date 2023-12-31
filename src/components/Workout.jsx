@@ -96,7 +96,7 @@ const Workout = () => {
       } else {
         // Handle end of workout
         setMessage("Workout complete!");
-        setTimerDuration(0);
+        setWorkoutStarted(false);
       }
     }
     setIsRest(!isRest);
@@ -109,18 +109,18 @@ const Workout = () => {
 
   return (
     <div>
-      {!workoutStarted ? (
-        <button onClick={startWorkout}>Start Workout</button>
-      ) : (
-        <div>
-          <h2>{message}</h2>
+      <div>
+        <h2>{message}</h2>
+        {!workoutStarted ? (
+          <button onClick={startWorkout}>Start Workout</button>
+        ) : (
           <Timer
             duration={timerDuration}
             onComplete={handleTimerComplete}
             isBeeping={timerBeeping}
           />
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
