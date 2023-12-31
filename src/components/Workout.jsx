@@ -18,6 +18,7 @@ const Workout = () => {
   const [workoutStarted, setWorkoutStarted] = useState(false);
   const [message, setMessage] = useState("");
   const [timerDuration, setTimerDuration] = useState(restDuration); // Start with a 5s rest
+  const [timerBeeping, setTimerBeeping] = useState(false);
 
   const [wakeLock, setWakeLock] = useState(null);
 
@@ -79,11 +80,14 @@ const Workout = () => {
       // Moving to the next exercise
       const newExercise = workoutPlan[nextIndex];
       setTimerDuration(exerciseDuration);
+      setTimerBeeping(true);
+
       // Update message to the new exercise, which will be spoken and displayed
       setMessage(newExercise);
       setWorkoutIndex(nextIndex);
     } else {
       // Starting rest
+      setTimerBeeping(false);
       if (nextIndex < workoutPlan.length) {
         // Update message to "Next up" only if there's another exercise
         setMessage("Next up: " + workoutPlan[nextIndex]);
@@ -109,7 +113,11 @@ const Workout = () => {
       ) : (
         <div>
           <h2>{message}</h2>
-          <Timer duration={timerDuration} onComplete={handleTimerComplete} />
+          <Timer
+            duration={timerDuration}
+            onComplete={handleTimerComplete}
+            isBeeping={timerBeeping}
+          />
         </div>
       )}
     </div>
