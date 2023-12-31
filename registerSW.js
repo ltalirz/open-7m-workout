@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/open-7m-workout/sw.js', { scope: '/open-7m-workout/' })})}
