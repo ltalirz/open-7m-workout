@@ -13,7 +13,7 @@ function beep(myAudioContext, duration, frequency, volume) {
     // Set default duration if not provided
     duration = duration || 150;
     frequency = frequency || 440;
-    volume = volume || 25;
+    volume = volume || 15;
 
     try {
       let oscillatorNode = myAudioContext.createOscillator();
