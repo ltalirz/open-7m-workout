@@ -9,6 +9,7 @@ export default defineConfig({
     VitePWA({
       registerType: "autoUpdate",
       manifest: {
+        start_url: "/open-7m-workout/",
         description:
           "Minimalist open-source 7 minute workout app built with React and Vite.",
         theme_color: "#ffffff",
