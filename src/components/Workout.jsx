@@ -84,14 +84,14 @@ const Workout = () => {
       setTimerBeeping(true);
 
       // Update message to the new exercise, which will be spoken and displayed
-      setMessage(newExercise);
+      setMessage(newExercise.name);
       setWorkoutIndex(nextIndex);
     } else {
       // Starting rest
       setTimerBeeping(false);
       if (nextIndex < workoutPlan.length) {
         // Update message to "Next up" only if there's another exercise
-        setMessage("Next up: " + workoutPlan[nextIndex]);
+        setMessage("Next up: " + workoutPlan[nextIndex].name);
         setTimerDuration(restDuration);
       } else {
         // Handle end of workout
