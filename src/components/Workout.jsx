@@ -14,7 +14,7 @@ const Workout = () => {
 
   const [isRest, setIsRest] = useState(true); // Start with rest
   const [workoutPlan, setWorkoutPlan] = useState([]);
-  const [workoutIndex, setWorkoutIndex] = useState(0);
+  const [workoutIndex, setWorkoutIndex] = useState(-1);
   const [workoutStarted, setWorkoutStarted] = useState(false);
   const [message, setMessage] = useState("");
   const [timerDuration, setTimerDuration] = useState(restDuration); // Start with a 5s rest
