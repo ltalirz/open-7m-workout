@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types";
 import beep from "./Beep";
 
 const Timer = ({ duration, onComplete, isBeeping }) => {
