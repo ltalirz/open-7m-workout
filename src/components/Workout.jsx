@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Timer from "./Timer";
+import SetIndicator from "./SetIndicator";
 import generateWorkoutPlan from "./Plan";
 
 const Workout = () => {
@@ -15,6 +16,7 @@ const Workout = () => {
   const [isRest, setIsRest] = useState(true); // Start with rest
   const [workoutPlan, setWorkoutPlan] = useState([]);
   const [workoutIndex, setWorkoutIndex] = useState(-1);
+  const [setIndex, setSetIndex] = useState(0);
   const [workoutStarted, setWorkoutStarted] = useState(false);
   const [message, setMessage] = useState("");
   const [timerDuration, setTimerDuration] = useState(restDuration); // Start with a 5s rest
@@ -77,6 +79,7 @@ const Workout = () => {
   const handleTimerComplete = () => {
     const nextIndex = workoutIndex + 1;
 
+
     if (isRest) {
       // Moving to the next exercise
       const newExercise = workoutPlan[nextIndex];
@@ -92,6 +95,9 @@ const Workout = () => {
       if (nextIndex < workoutPlan.length) {
         // Update message to "Next up" only if there's another exercise
         setMessage("Next up: " + workoutPlan[nextIndex]);
+        
+        // update set index
+        setSetIndex(Math.floor((workoutIndex+1) / 12));
         setTimerDuration(restDuration);
       } else {
         // Handle end of workout
@@ -114,11 +120,17 @@ const Workout = () => {
         {!workoutStarted ? (
           <button onClick={startWorkout}>Start Workout</button>
         ) : (
+          <div>
+          <SetIndicator
+            currentSet={setIndex}
+            totalSets={sets}
+          />
           <Timer
             duration={timerDuration}
             onComplete={handleTimerComplete}
             isBeeping={timerBeeping}
           />
+          </div>
         )}
       </div>
     </div>
