@@ -2,14 +2,10 @@
 
 Minimalist open-source 7 minute workout app built with React and Vite hosted at [ltalirz.github.io/open-7m-workout](https://ltalirz.github.io/open-7m-workout/).
 
-The app randomly generates a workout plan according to the following rules:
+One set consists of 12 exercises, 3 from each of four categories (total body, lower body, upper body, core).
 
-- set: 12 exercises, 3 from each of four categories (total body, lower body, upper body, core)
-- 30s per exercise
-- 5s of rest between exercises
-- 3 sets
-
-Exercise duration, rest duration and number of sets can be configured via URL parameters, so you can bookmark the URL with the settings you prefer. For example: [ltalirz.github.io/open-7m-workout/?duration=30&rest=5&sets=3](https://ltalirz.github.io/open-7m-workout/?duration=10&rest=5&sets=3)
+By default, the workout consists of 3 sets, and each exercise is performed for 30 seconds with 5 seconds of rest between exercises.
+Exercise duration, rest duration and number of sets can be configured via URL parameters, so you can bookmark the URL with the settings you prefer. For example: [ltalirz.github.io/open-7m-workout/?sets=1&duration=30&rest=10](https://ltalirz.github.io/open-7m-workout/?sets=1&duration=30&rest=10)
 
 ## Requirements
 
