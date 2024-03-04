@@ -121,14 +121,14 @@ const Workout = () => {
           <button onClick={startWorkout}>Start Workout</button>
         ) : (
           <div>
-          <SetIndicator
-            currentSet={setIndex}
-            totalSets={sets}
-          />
           <Timer
             duration={timerDuration}
             onComplete={handleTimerComplete}
             isBeeping={timerBeeping}
+          />
+          <SetIndicator
+            currentSet={setIndex}
+            totalSets={sets}
           />
           </div>
         )}
