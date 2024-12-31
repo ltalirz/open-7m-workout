@@ -79,7 +79,6 @@ const Workout = () => {
   const handleTimerComplete = () => {
     const nextIndex = workoutIndex + 1;
 
-
     if (isRest) {
       // Moving to the next exercise
       const newExercise = workoutPlan[nextIndex];
@@ -95,9 +94,9 @@ const Workout = () => {
       if (nextIndex < workoutPlan.length) {
         // Update message to "Next up" only if there's another exercise
         setMessage("Next up: " + workoutPlan[nextIndex].name);
-        
+
         // update set index
-        setSetIndex(Math.floor((workoutIndex+1) / 12));
+        setSetIndex(Math.floor((workoutIndex + 1) / 12));
         setTimerDuration(restDuration);
       } else {
         // Handle end of workout
@@ -121,15 +120,12 @@ const Workout = () => {
           <button onClick={startWorkout}>Start Workout</button>
         ) : (
           <div>
-          <Timer
-            duration={timerDuration}
-            onComplete={handleTimerComplete}
-            isBeeping={timerBeeping}
-          />
-          <SetIndicator
-            currentSet={setIndex}
-            totalSets={sets}
-          />
+            <Timer
+              duration={timerDuration}
+              onComplete={handleTimerComplete}
+              isBeeping={timerBeeping}
+            />
+            <SetIndicator currentSet={setIndex} totalSets={sets} />
           </div>
         )}
       </div>

@@ -4,11 +4,19 @@ const nCategories = Object.keys(exercises).length;
 const nExercisesPerCategory = 3;
 
 const generateWorkoutPlan = (nSets) => {
-  const totalBody = exercises.TotalBody.filter(exercise => exercise.difficulty === "hard");
+  const totalBody = exercises.TotalBody.filter(
+    (exercise) => exercise.difficulty === "hard",
+  );
   console.log(totalBody);
-  const lowerBody = exercises.LowerBody.filter(exercise => exercise.difficulty === "hard");
-  const upperBody = exercises.UpperBody.filter(exercise => exercise.difficulty === "hard");
-  const core = exercises.Core.filter(exercise => exercise.difficulty === "hard");
+  const lowerBody = exercises.LowerBody.filter(
+    (exercise) => exercise.difficulty === "hard",
+  );
+  const upperBody = exercises.UpperBody.filter(
+    (exercise) => exercise.difficulty === "hard",
+  );
+  const core = exercises.Core.filter(
+    (exercise) => exercise.difficulty === "hard",
+  );
 
   let picks = [
     pickRandom(totalBody, nExercisesPerCategory),
