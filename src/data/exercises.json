@@ -8,7 +8,7 @@
     {
       "name": "Burpees",
       "difficulty": "hard",
-      "hint": null
+      "hint": "Keep your core engaged as you jump your feet back. Focus on supporting much of your bodyweight with your arms and shoulders. Stay composed as you jump up."
     },
     {
       "name": "Drop & Touch",
@@ -18,7 +18,7 @@
     {
       "name": "High Knees",
       "difficulty": "hard",
-      "hint": null
+      "hint": "Stay on your toes and keep your core engaged. Lift knees as high as you can and swing your arms forcefully."
     },
     {
       "name": "Jumping Jacks",
@@ -53,27 +53,27 @@
     {
       "name": "Jump Rope Skip",
       "difficulty": "easy",
-      "hint": null
+      "hint": "Stay on your toes and keep your core engaged. Keep your shoulders relaxed and don't forget to breathe."
     },
     {
       "name": "March In Place",
       "difficulty": "easy",
-      "hint": null
+      "hint": "Stay on your toes and keep your core engaged. Lift your knees as high as you can and lift your arms."
     },
     {
       "name": "Side-To-Side Shuffle",
       "difficulty": "easy",
-      "hint": null
+      "hint": "Stay on your toes as you quicksteps. Keep your core engaged. Swing your arms as if you are running."
     },
     {
       "name": "Squat & Box",
       "difficulty": "easy",
-      "hint": null
+      "hint": "Use a wider stance than usual for a wider squat. Keep your core engaged as you punch. Punch rapidly to elevate your heart rate."
     },
     {
       "name": "Stand & Box",
       "difficulty": "easy",
-      "hint": null
+      "hint": "Keep your knees slightly bent and core engaged as you punch. Punch rapidly to elevate your heart rate."
     },
     {
       "name": "Step-Up",
@@ -85,7 +85,7 @@
     {
       "name": "Chair Split Squat",
       "difficulty": "hard",
-      "hint": null
+      "hint": "Start slowly and make sure you are stable. Keep your front knee behind your toes. Bend your back knee as you squat down."
     },
     {
       "name": "Long Jumps",
@@ -95,7 +95,7 @@
     {
       "name": "Lunge & Rotation",
       "difficulty": "hard",
-      "hint": null
+      "hint": "Lunge slowly art first and make sure you are stable. Keep your front knee behind your toes. Make sure to lunge down, not forward and keep an upright posture. Rotate slowly and carefully."
     },
     {
       "name": "One-Leg Deadlift",
@@ -115,7 +115,7 @@
     {
       "name": "One-Leg Squat Hops",
       "difficulty": "hard",
-      "hint": null
+      "hint": "Maintain the partial squat position while hopping and stay on your toes. Keep your core engaged and maintain your balance."
     },
     {
       "name": "One-Leg Squat Touch",
@@ -140,17 +140,17 @@
     {
       "name": "Side Lunge",
       "difficulty": "hard",
-      "hint": null
+      "hint": "Keep your knees behind your toes. Don't lunge too deep. Use your arms to help balance."
     },
     {
       "name": "Chair-Assist Split Squat",
       "difficulty": "easy",
-      "hint": null
+      "hint": "Start slowly and make sure you are stable. Keep your front knee behind your toes and bend your back knee as you squat down."
     },
     {
       "name": "Chair-Assist Squat",
       "difficulty": "easy",
-      "hint": null
+      "hint": "Keep your knees behind your toes and push through your heels. Use your arms to counter-balance you."
     },
     {
       "name": "Lunge",
@@ -187,22 +187,22 @@
     {
       "name": "Chair Pike push-up",
       "difficulty": "hard",
-      "hint": "Maintain the pike position to keep your legs straight. "
+      "hint": "Maintain the pike position to keep your legs straight. Focus on using your shoulder muscles and breathe out as you push up."
     },
     {
       "name": "Diamond push-up",
       "difficulty": "hard",
-      "hint": null
+      "hint": "Focus on your triceps as you push up and keep your body straight from head to heel. Breathe out as you push up."
     },
     {
       "name": "Downward Dog grasshopper",
       "difficulty": "hard",
-      "hint": null
+      "hint": "Squeeze your core muscles to help you bring your knee forward. Don't forget to breathe."
     },
     {
       "name": "Grasshopper Push-Up",
       "difficulty": "hard",
-      "hint": null
+      "hint": "Keep your hips up and body straight from head to heel. Squeeze your core muscles to help you bring your knee forward. Breathe out as you push up."
     },
     {
       "name": "Hindu Push-Up",
@@ -212,7 +212,7 @@
     {
       "name": "One-Leg Push-Up",
       "difficulty": "hard",
-      "hint": null
+      "hint": "Keep your hips up and body straight from head to heel. Squeeze your core muscles to help you hold your leg off the floor. Breathe out as you push up."
     },
     {
       "name": "One-Leg Triceps Dip",
@@ -222,10 +222,8 @@
     {
       "name": "Power Push-Up",
       "difficulty": "hard",
-      "tags": [
-        "no-vest"
-      ],
-      "hint": null
+      "tags": ["no-vest"],
+      "hint": "Keep your hips up and body straight from head to heel. Push up and try to lift your hands slightly off the floor. Breathe out as you push up."
     },
     {
       "name": "Push-Up and Rotation",
@@ -240,7 +238,7 @@
     {
       "name": "Chair-Assist Push-Up",
       "difficulty": "easy",
-      "hint": null
+      "hint": "Keep your hips up and body straight from head to heel. Breathe out as you push up."
     },
     {
       "name": "Kneeling Push-up",
@@ -267,15 +265,13 @@
     {
       "name": "Advanced Bird Dog",
       "difficulty": "hard",
-      "hint": null
+      "hint": "Move slowly at first as you alternate arms and legs and keep your core stable. "
     },
     {
       "name": "Bicycle Crunch",
       "difficulty": "hard",
-      "tags": [
-        "no-vest"
-      ],
-      "hint": null
+      "tags": ["no-vest"],
+      "hint": "Use a peddling motion with your legs. Keep your core engaged at all times. Don't pull at the back of your head."
     },
     {
       "name": "Full Side Plank",
@@ -285,7 +281,7 @@
     {
       "name": "One-Leg Bridge",
       "difficulty": "hard",
-      "hint": null
+      "hint": "Squeeze your glutes and hamstrings as well as your core muscles. Keep your chin off your chest. Don't forget to breathe."
     },
     {
       "name": "Plank",
@@ -305,7 +301,7 @@
     {
       "name": "Scissor Kicks",
       "difficulty": "hard",
-      "hint": null
+      "hint": "Keep your core engaged and don't forget to alternate legs."
     },
     {
       "name": "Side Plank Crunch",
@@ -320,20 +316,18 @@
     {
       "name": "Windscreen Wipers",
       "difficulty": "hard",
-      "tags": [
-        "no-vest"
-      ],
+      "tags": ["no-vest"],
       "hint": "Keep your core engaged at all times and breathe out as you raise your legs back to center."
     },
     {
       "name": "Abdominal Crunch",
       "difficulty": "easy",
-      "hint": null
+      "hint": "Look upwards and keep your chin off your chest. Keep your head and neck in a neutral position."
     },
     {
       "name": "Kneeling Plank",
       "difficulty": "easy",
-      "hint": null
+      "hint": "Keep your hips up and body straight from head to knees. Don't forget to breathe."
     },
     {
       "name": "Kneeling Side Plank",
